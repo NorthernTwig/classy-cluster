@@ -1,9 +1,9 @@
-package classyCluster.structure.algorithms;
+package classyCluster.models.algorithms;
 
-import classyCluster.structure.Article;
-import classyCluster.structure.Centroid;
-import classyCluster.structure.Pearson;
-import classyCluster.structure.Randomizer;
+import classyCluster.models.Article;
+import classyCluster.models.Centroid;
+import classyCluster.models.Pearson;
+import classyCluster.models.Randomizer;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
 package classyCluster.view;
 
-import classyCluster.structure.Centroid;
+import classyCluster.models.Centroid;
 
 import java.util.ArrayList;
 

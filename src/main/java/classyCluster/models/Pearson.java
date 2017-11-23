@@ -1,4 +1,4 @@
-package classyCluster.structure;
+package classyCluster.models;
 
 public class Pearson {
     public static double calculate(Article A, Article B) {

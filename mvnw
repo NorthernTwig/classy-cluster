@@ -194,7 +194,7 @@ if $cygwin; then
     CLASSPATH=`cygpath --path --windows "$CLASSPATH"`
 fi
 
-# traverses directory classyCluster.structure from process work directory to filesystem root
+# traverses directory classyCluster.models from process work directory to filesystem root
 # first directory with .mvn subdirectory is considered project base directory
 find_maven_basedir() {
   local basedir=$(pwd)

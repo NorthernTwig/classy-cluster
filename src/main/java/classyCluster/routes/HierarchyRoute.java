@@ -1,6 +1,6 @@
 package classyCluster.routes;
 
-import classyCluster.structure.algorithms.Hierarchy;
+import classyCluster.models.algorithms.Hierarchy;
 import classyCluster.utils.Analyzer;
 import classyCluster.utils.FileHandler;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -5,10 +5,10 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-import classyCluster.structure.algorithms.Kmeans;
+import classyCluster.models.algorithms.Kmeans;
 import classyCluster.utils.Analyzer;
 import classyCluster.utils.FileHandler;
-import classyCluster.structure.Centroid;
+import classyCluster.models.Centroid;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import classyCluster.view.KmeansView;

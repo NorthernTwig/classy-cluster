@@ -1,4 +1,4 @@
-package classyCluster.structure;
+package classyCluster.models;
 
 public class Word {
     private String word;

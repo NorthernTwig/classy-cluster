@@ -1,8 +1,8 @@
-package classyCluster.structure.algorithms;
+package classyCluster.models.algorithms;
 
-import classyCluster.structure.Article;
-import classyCluster.structure.Cluster;
-import classyCluster.structure.Pearson;
+import classyCluster.models.Article;
+import classyCluster.models.Cluster;
+import classyCluster.models.Pearson;
 
 import java.util.ArrayList;
 

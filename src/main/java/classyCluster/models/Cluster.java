@@ -1,4 +1,4 @@
-package classyCluster.structure;
+package classyCluster.models;
 
 public class Cluster {
     Cluster left;

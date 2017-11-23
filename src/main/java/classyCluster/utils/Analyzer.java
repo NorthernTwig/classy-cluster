@@ -1,7 +1,7 @@
 package classyCluster.utils;
 
-import classyCluster.structure.Article;
-import classyCluster.structure.Word;
+import classyCluster.models.Article;
+import classyCluster.models.Word;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
