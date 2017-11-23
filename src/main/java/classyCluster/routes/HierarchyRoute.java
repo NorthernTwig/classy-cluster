@@ -25,7 +25,6 @@ public class HierarchyRoute {
         hierarchy.init();
         while (hierarchy.hasClusterLeft()) hierarchy.iterate();
 
-
         HierarchyView view = new HierarchyView(hierarchy.clusters.get(0));
         return view.get();
     }
