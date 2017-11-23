@@ -12,7 +12,7 @@ public class KmeansView {
             if (clusteredCentroid.cluster.size() > 0) {
                 builder.append("\n");
                 builder.append("<hr>");
-                builder.append("<p>").append("Cluster Size: " + clusteredCentroid.cluster.size()).append("</p>");
+                builder.append("<p>").append("Cluster Size: ").append(clusteredCentroid.cluster.size()).append("</p>");
                 builder.append("<ul>");
                 clusteredCentroid.cluster.forEach(article -> {
                     builder.append("<li>").append(article.name).append("</li>");
