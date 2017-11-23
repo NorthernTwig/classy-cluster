@@ -1,8 +1,8 @@
 package classyCluster.models;
 
 public class Cluster {
-    Cluster left;
-    Cluster right;
+    public Cluster left = null;
+    public Cluster right = null;
     Cluster parent;
     Article article;
     double distance;
@@ -14,6 +14,10 @@ public class Cluster {
 
     public Article getArticle() {
         return article;
+    }
+
+    public String toString() {
+        return article.name;
     }
 
     public Cluster merge(Cluster oc, double distance) {
@@ -29,7 +33,7 @@ public class Cluster {
         // Merge articles
         Article article = new Article("");
 
-        for (int i = 0; i < article.getSize(); i++) {
+        for (int i = 0; i < this.article.getSize(); i++) {
             Word firstWords = this.article.getWord(i);
             Word secondWords = oc.article.getWord(i);
             double averageCount = (firstWords.getCount() + secondWords.getCount()) / 2.0;
@@ -37,9 +41,6 @@ public class Cluster {
         }
 
         p.article = article;
-
-        System.out.println(article);
-
         p.distance = distance;
 
         return p;

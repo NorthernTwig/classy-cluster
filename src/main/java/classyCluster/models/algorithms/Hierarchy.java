@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Hierarchy {
     ArrayList<Article> articles;
-    ArrayList<Cluster> clusters;
+    public ArrayList<Cluster> clusters;
 
     public Hierarchy(ArrayList<Article> articles) {
         this.articles = articles;
@@ -41,15 +41,12 @@ public class Hierarchy {
                     bestB = clusterTwo;
                 }
             }
-
         }
 
-        if (bestA != null) {
-            Cluster mergedCluster = bestA.merge(bestB, closest);
-            clusters.add(mergedCluster);
-            clusters.remove(bestA);
-            clusters.remove(bestB);
-        }
+        Cluster mergedCluster = bestA.merge(bestB, closest);
+        clusters.add(mergedCluster);
+        clusters.remove(bestA);
+        clusters.remove(bestB);
     }
 
     public boolean hasClusterLeft() {

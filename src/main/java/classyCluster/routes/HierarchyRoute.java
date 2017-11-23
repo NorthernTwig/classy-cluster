@@ -3,6 +3,7 @@ package classyCluster.routes;
 import classyCluster.models.algorithms.Hierarchy;
 import classyCluster.utils.Analyzer;
 import classyCluster.utils.FileHandler;
+import classyCluster.view.HierarchyView;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,8 @@ public class HierarchyRoute {
         hierarchy.init();
         while (hierarchy.hasClusterLeft()) hierarchy.iterate();
 
-        return "<h1>Du kom hit! :)</h1>";
+
+        HierarchyView view = new HierarchyView(hierarchy.clusters.get(0));
+        return view.get();
     }
 }
