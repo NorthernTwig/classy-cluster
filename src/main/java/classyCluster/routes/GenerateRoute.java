@@ -1,6 +1,7 @@
 package classyCluster.routes;
 
 import classyCluster.utils.FileHandler;
+import classyCluster.utils.Frequency;
 import classyCluster.view.GenerateView;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,9 @@ public class GenerateRoute {
     @RequestMapping("/generate")
     public String wiki() throws IOException, URISyntaxException {
         FileHandler handler = new FileHandler();
-        handler.generateWikiData();
+        Frequency frequency = new Frequency(handler.readAll());
+        String wiki = frequency.generateWikiData();
+        handler.writeWiki(wiki);
         return GenerateView.get();
     }
 }
