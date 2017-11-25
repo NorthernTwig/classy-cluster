@@ -24,7 +24,6 @@ public class Analyzer {
         textData = text;
         getWords();
         createArticles();
-        System.out.println(articles);
     }
 
     private void getWords() {
