@@ -42,7 +42,6 @@ public class Kmeans {
             count++;
         }
 
-        System.out.println("iterations: " + count);
         return centroids;
     }
 
