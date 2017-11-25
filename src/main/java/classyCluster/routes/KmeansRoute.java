@@ -16,10 +16,19 @@ import classyCluster.view.KmeansView;
 @RestController
 public class KmeansRoute {
 
-    @RequestMapping("/kmeans")
-    public String kmeans() throws IOException, URISyntaxException {
+    @RequestMapping("/kmeans/blog")
+    public String kmeanblog() throws IOException, URISyntaxException {
+        return get("blogdata.txt");
+    }
+
+    @RequestMapping("/kmeans/wiki")
+    public String kmeanwiki() throws IOException, URISyntaxException {
+        return get("wikidata.txt");
+    }
+
+    private String get(String file) throws IOException, URISyntaxException {
         FileHandler handler = new FileHandler();
-        List<String> data = handler.read();
+        List<String> data = handler.read(file);
 
         Analyzer analyzer = new Analyzer();
         analyzer.analyzeText(data);
