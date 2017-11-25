@@ -13,10 +13,20 @@ import java.util.List;
 
 @RestController
 public class HierarchyRoute {
-    @RequestMapping("/hier")
-    public String hierarchy() throws IOException, URISyntaxException {
+
+    @RequestMapping("/hier/wiki")
+    public String hierwiki() throws IOException, URISyntaxException {
+        return get("wikidata.txt");
+    }
+
+    @RequestMapping("/hier/blog")
+    public String hierblog() throws IOException, URISyntaxException {
+        return get("blogdata.txt");
+    }
+
+    private String get(String file) throws IOException, URISyntaxException {
         FileHandler handler = new FileHandler();
-        List<String> data = handler.read();
+        List<String> data = handler.read(file);
 
         Analyzer analyzer = new Analyzer();
         analyzer.analyzeText(data);
