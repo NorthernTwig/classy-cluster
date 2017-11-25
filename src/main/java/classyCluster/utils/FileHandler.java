@@ -7,15 +7,12 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class FileHandler {
-    public List<String> read() throws IOException, URISyntaxException {
-        URI uri = this.getClass().getResource("/blogdata.txt").toURI();
+    public List<String> read(String dataPath) throws IOException, URISyntaxException {
+        URI uri = this.getClass().getResource("/" + dataPath).toURI();
         return Files.readAllLines(Paths.get(uri), Charset.defaultCharset());
     }
 
